@@ -1,0 +1,11 @@
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\bin\Debug\net6.0\Forum.ViewModels.deps.json
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\bin\Debug\net6.0\Forum.ViewModels.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\bin\Debug\net6.0\Forum.ViewModels.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\obj\Debug\net6.0\Forum.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\obj\Debug\net6.0\Forum.ViewModels.AssemblyInfoInputs.cache
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\obj\Debug\net6.0\Forum.ViewModels.AssemblyInfo.cs
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\obj\Debug\net6.0\Forum.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\obj\Debug\net6.0\Forum.ViewModels.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\obj\Debug\net6.0\refint\Forum.ViewModels.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\obj\Debug\net6.0\Forum.ViewModels.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.ViewModels\obj\Debug\net6.0\ref\Forum.ViewModels.dll

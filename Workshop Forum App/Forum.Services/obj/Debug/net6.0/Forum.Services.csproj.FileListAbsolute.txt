@@ -1,0 +1,23 @@
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Workshop Forum App.deps.json
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Workshop Forum App.runtimeconfig.json
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\appsettings.json
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Workshop Forum App.staticwebassets.runtime.json
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Workshop Forum App.exe
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Forum.Services.deps.json
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Forum.Services.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Forum.Services.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Forum.ViewModels.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Workshop Forum App.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Forum.ViewModels.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\bin\Debug\net6.0\Workshop Forum App.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\Forum.Services.csproj.AssemblyReference.cache
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\Forum.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\Forum.Services.AssemblyInfoInputs.cache
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\Forum.Services.AssemblyInfo.cs
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\Forum.Services.csproj.CoreCompileInputs.cache
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\Forum.Services.csproj.CopyComplete
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\Forum.Services.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\refint\Forum.Services.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\Forum.Services.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\Workshop Forum App\Forum.Services\obj\Debug\net6.0\ref\Forum.Services.dll
