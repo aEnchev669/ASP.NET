@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Forum.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Forum.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Forum.Services.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Forum.Services/1.0.0": {
+      "type": "project",
+      "path": "../Forum.Services/Forum.Services.csproj",
+      "msbuildProject": "../Forum.Services/Forum.Services.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Forum.Services >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\aench\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\aench\\OneDrive\\Документи\\GitHub\\ASP.NET-\\Workshop Forum App\\Forum.Services\\Forum.Services.csproj": {
+              "projectPath": "C:\\Users\\aench\\OneDrive\\Документи\\GitHub\\ASP.NET-\\Workshop Forum App\\Forum.Services\\Forum.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

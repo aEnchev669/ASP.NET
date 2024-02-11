@@ -1,0 +1,15 @@
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\bin\Debug\net6.0\ForumApp24.Core.deps.json
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\bin\Debug\net6.0\ForumApp24.Core.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\bin\Debug\net6.0\ForumApp24.Core.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\bin\Debug\net6.0\ForumApp24.Infrastructure.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\bin\Debug\net6.0\ForumApp24.Infrastructure.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ForumApp24.Core.csproj.AssemblyReference.cache
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ForumApp24.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ForumApp24.Core.AssemblyInfoInputs.cache
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ForumApp24.Core.AssemblyInfo.cs
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ForumApp24.Core.csproj.CoreCompileInputs.cache
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ForumApp24.Core.csproj.CopyComplete
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ForumApp24.Core.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\refint\ForumApp24.Core.dll
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ForumApp24.Core.pdb
+C:\Users\aench\OneDrive\Документи\GitHub\ASP.NET-\ForumApp2024-2nd\ForumApp24.Core\obj\Debug\net6.0\ref\ForumApp24.Core.dll

@@ -90,7 +90,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\aench\\OneDrive\\Документи\\GitHub\\ASP.NET-\\Workshop Forum App\\Forum.Services\\Forum.Services.csproj": {
+                "projectPath": "C:\\Users\\aench\\OneDrive\\Документи\\GitHub\\ASP.NET-\\Workshop Forum App\\Forum.Services\\Forum.Services.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
