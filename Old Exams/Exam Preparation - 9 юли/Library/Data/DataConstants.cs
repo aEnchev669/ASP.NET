@@ -12,8 +12,8 @@
         public const int BookDescriptionMinLength = 5;
         public const int BookDescriptionMaxLength = 5000;
 
-        public const int BookRangeMinValue = 0;
-        public const int BookRangeMaxValue = 10;
+        public const double BookRangeMinValue = 0.00;
+        public const double BookRangeMaxValue = 10.00;
 
         //Category
         public const int CategoryNameMinLength = 5;

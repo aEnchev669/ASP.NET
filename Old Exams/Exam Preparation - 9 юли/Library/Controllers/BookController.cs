@@ -7,56 +7,56 @@ using System.Security.Claims;
 
 namespace Library.Controllers
 {
-	[Authorize]
-	public class BookController : Controller
-	{
-		private readonly LibraryDbContext data;
-		public BookController(LibraryDbContext context)
-		{
-			data = context;
-		}
-		public async Task<IActionResult> All()
-		{
-			var events = await data.Books
-				.AsNoTracking()
-				.Select(b => new AllBookViewModel
-				{
-					Id = b.Id,
-					Title = b.Title,
-					Author = b.Author,
-					ImageUrl = b.ImageUrl,
-					Rating = b.Rating,
-					Category = b.Category.Name
-				})
-				.ToListAsync();
+    [Authorize]
+    public class BookController : Controller
+    {
+        private readonly LibraryDbContext data;
+        public BookController(LibraryDbContext context)
+        {
+            data = context;
+        }
+        public async Task<IActionResult> All()
+        {
+            var events = await data.Books
+                .AsNoTracking()
+                .Select(b => new AllBookViewModel
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Author = b.Author,
+                    ImageUrl = b.ImageUrl,
+                    Rating = b.Rating,
+                    Category = b.Category.Name
+                })
+                .ToListAsync();
 
-			return View(events);
-		}
+            return View(events);
+        }
 
-		[HttpGet]
+        [HttpGet]
 
-		public async Task<IActionResult> Mine()
-		{
-			var userId = GetUserId();
-			var model =await data.IdentityUsers
-				.Where(iu => iu.CollectorId == userId)
-				.AsNoTracking()
-				.Select(b => new AllBookViewModel
-				{
-					Id = b.BookId,
-					Title = b.Book.Title,
-					Author = b.Book.Author,
-					ImageUrl = b.Book.ImageUrl,
-					Description = b.Book.Description,
-					Category = b.Book.Category.Name
-				})
-				.ToListAsync();
+        public async Task<IActionResult> Mine()
+        {
+            var userId = GetUserId();
+            var model = await data.IdentityUsers
+                .Where(iu => iu.CollectorId == userId)
+                .AsNoTracking()
+                .Select(b => new AllBookViewModel
+                {
+                    Id = b.BookId,
+                    Title = b.Book.Title,
+                    Author = b.Book.Author,
+                    ImageUrl = b.Book.ImageUrl,
+                    Description = b.Book.Description,
+                    Category = b.Book.Category.Name
+                })
+                .ToListAsync();
 
-			return View(model);
-		}
+            return View(model);
+        }
 
         public async Task<IActionResult> RemoveFromCollection(int Id)
-		{
+        {
             string userId = GetUserId();
 
             var b = await data.Books
@@ -69,65 +69,93 @@ namespace Library.Controllers
                 return BadRequest();
             }
 
-			var ub = b.UsersBooks.FirstOrDefault(u => u.CollectorId == userId);
+            var ub = b.UsersBooks.FirstOrDefault(u => u.CollectorId == userId);
 
-			if (ub != null)
-			{
-				b.UsersBooks.Remove(ub);
-				 await data.SaveChangesAsync();	
+            if (ub != null)
+            {
+                b.UsersBooks.Remove(ub);
+                await data.SaveChangesAsync();
 
-				return RedirectToAction("Mine");
-			}
+                return RedirectToAction("Mine");
+            }
 
-			return BadRequest();
+            return BadRequest();
         }
 
         [HttpPost]
-		public async Task<IActionResult> AddToCollection( BookViewModel givenBook)
-		{
-			var book = await data.Books
-			   .Select(b => new AllBookViewModel
-			   {
-				   Id = b.Id,
-				   Title = b.Title,
-				   Author = b.Author,
-				   ImageUrl = b.ImageUrl,
-				   Rating = b.Rating,
-				   Category = b.Category.Name
-			   })
-			   .ToListAsync();
+        public async Task<IActionResult> AddToCollection(BookViewModel givenBook)
+        {
+            var id = GetUserId();
 
-			if (book == null)
-			{
-				return BadRequest();
-			}
+            bool alreadyAdded = await data.IdentityUsers
+                .AnyAsync(b => b.CollectorId == id && b.BookId == givenBook.Id);
 
+            if (!alreadyAdded)
+            {
+                var userBook = new IdentityUserBook()
+                {
+                    CollectorId = id,
+                    BookId = givenBook.Id
+                };
 
-			var id = GetUserId();
+                await data.IdentityUsers.AddAsync(userBook);
+                await data.SaveChangesAsync();
+                return RedirectToAction("All");
 
-			bool alreadyAdded = await data.IdentityUsers
-				.AnyAsync(b => b.CollectorId == id && b.BookId == givenBook.Id);
+            }
 
-			if (!alreadyAdded)
-			{
-				var userBook = new IdentityUserBook()
-				{
-					CollectorId = id,
-					BookId = givenBook.Id
-				};
+            return RedirectToAction("All");
+        }
 
-				await data.IdentityUsers.AddAsync(userBook);
-				await data.SaveChangesAsync();
-				return RedirectToAction("All");
+        [HttpGet]
+        public async Task<IActionResult> Add()
+        {
+            var model = new BookFromViewModel();
+            model.Categories = await GetCategories();
 
-			}
+            return View(model);
+        }
 
-			return RedirectToAction("All");
-		}
+        [HttpPost]
+        public async Task<IActionResult> Add(BookFromViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                model.Categories = await GetCategories();
+                return View(model);
+            }
 
-		private string GetUserId()
-		{
-			return User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
-		}
-	}
+            var entity = new Book()
+            {
+                Title = model.Title,
+                Author = model.Author,
+                Description = model.Description,
+                ImageUrl = model.Url,
+                Rating = model.Rating,
+                CategoryId = model.CategoryId,
+            };
+
+            await data.Books.AddAsync(entity);
+            await data.SaveChangesAsync();
+
+            return RedirectToAction("All");
+        }
+
+        private async Task<IEnumerable<Category>> GetCategories()
+        {
+            return await data.Categories
+                .AsNoTracking()
+                .Select(t => new Category
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                })
+                .ToListAsync();
+        }
+
+        private string GetUserId()
+        {
+            return User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
+        }
+    }
 }

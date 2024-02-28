@@ -32,11 +32,11 @@ namespace Library.Models
         [Range(BookRangeMinValue, BookRangeMaxValue)]
         public decimal Rating { get; set; }
 
-        [Required(ErrorMessage =RequiredErrorMessage)]
+        [Required(ErrorMessage = RequiredErrorMessage)]
         [StringLength(BookDescriptionMaxLength,
             MinimumLength = BookDescriptionMinLength,
             ErrorMessage = StringLengthErrorMessage)]
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         [Required(ErrorMessage = RequiredErrorMessage)]
         [Range(0, int.MaxValue)]
