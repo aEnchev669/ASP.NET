@@ -1,7 +1,13 @@
+using AspNetCoreAdvanceDemo.ModelBinders;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+	.AddMvcOptions(options=>
+	{
+		options.ModelBinderProviders.Insert(0, new DecimalModelBinderProider());
+	});
 
 var app = builder.Build();
 
