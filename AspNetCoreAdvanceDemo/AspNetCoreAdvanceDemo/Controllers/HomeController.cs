@@ -1,5 +1,6 @@
 ﻿using AspNetCoreAdvanceDemo.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.FileProviders;
 using System.Diagnostics;
 
 namespace AspNetCoreAdvanceDemo.Controllers
@@ -18,6 +19,47 @@ namespace AspNetCoreAdvanceDemo.Controllers
 			return View();
 		}
 
+		public IActionResult GetPrice(decimal price)
+		{
+			return Ok(new { price });
+		}
+
+		[HttpGet]
+		public IActionResult UploadFiles() => View();
+
+
+		[HttpPost]
+		public async Task<IActionResult> UploadFiles(IEnumerable<IFormFile> files)
+		{
+			string path = Path.Combine(Environment.CurrentDirectory, "Files");
+
+			foreach (var file in files.Where(f => f.Length > 0))
+			{
+				string fileName = Path.Combine(path, file.Name);
+
+				using (var filestream = new FileStream(fileName, FileMode.Create))
+				{
+					await file.CopyToAsync(filestream);
+				}
+			}
+ 
+			return Ok(
+				new
+				{
+					savedFilesLength = files.Sum(f => f.Length),
+				});
+		}
+
+		public IActionResult Download(string filename)
+		{
+			string path = Path.Combine(Environment.CurrentDirectory, "Files");
+			IFileProvider fileProvider = new PhysicalFileProvider(path);
+			IFileInfo fileInfo = fileProvider.GetFileInfo(filename); 
+			var stream = fileInfo.CreateReadStream();
+			var mimeType = "aplication/octet-stream";
+
+			return File(stream, mimeType, filename);
+		}
 		public IActionResult Privacy()
 		{
 			return View();
